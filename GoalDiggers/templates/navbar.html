@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="navbar.css">
+	<title>Navbar</title>
+</head>
+​
+<body>
+	<nav class="nav">
+		<div class="container">
+			<div class="logo">
+				<a href="#">Lali</a>
+			</div>
+			<div id="mainListDiv" class="main_list">
+				<ul class="navlinks">
+					<li class="color-black"><a href="#">About</a></li>
+					<li class="color-black"><a href="#">Portfolio</a></li>
+					<li class="color-black"><a href="#">Services</a></li>
+					<li class="color-black"><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<!-- <div class="translator">
+				<div id="google_translate_element"></div>
+				<script type="text/javascript">
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+					}
+				</script>
+​
+				<script type="text/javascript"
+					src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+​
+				<section class="home">
+				</section>
+			</div> -->
+			<span class="navTrigger">
+				<i></i>
+				<i></i>
+				<i></i>
+			</span>
+		</div>
+	</nav>
+​
+	<!-- Jquery needed -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
+​
+	<!-- Function used to shrink nav bar removing paddings and adding black background -->
+	<script>
+		$(window).scroll(function () {
+			if ($(document).scrollTop() > 50) {
+				$('.nav').addClass('affix');
+				console.log("OK");
+			} else {
+				$('.nav').removeClass('affix');
+			}
+		});
+	</script>
+​
+</body>
+​
+</html>
