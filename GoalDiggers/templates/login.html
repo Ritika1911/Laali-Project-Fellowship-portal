@@ -9,21 +9,22 @@
 	<title>CFG</title>
 </head>
 <body>
-	<div class="login-div">
-		<div class="width-setter">
-			<h1>ACCOUNT LOGIN</h1>
-			<div class="white-tile">
-				<form action="">
-					<i class="fas fa-user fa-2x"></i>
-					<input type="text" id="username" placeholder="Username">
-					<div class="separator"></div>
-					<i class="fas fa-unlock fa-2x"></i>
-					<input type="password" id="password" placeholder="Password">
-					<div class="separator"></div>
-				</form>
-				<a href="#" class="login-btn btn">LOG IN</a>
-			</div>
-		</div>
-	</div>
+	{% load crispy_forms_tags %}
+	<div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Welcome to the fellowship</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Log In</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            
+        </div>
+    </div>
+
 </body>
 </html>

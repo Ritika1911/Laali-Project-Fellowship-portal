@@ -25,7 +25,7 @@
 			<div class="card-body">
 			<h5 class="card-title">Grades</h5>
 			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<a href="#" class="btn btn-primary">Check Your Grades</a>
+			<a href="{% url 'interface' %}" class="btn btn-primary">Check Your Grades</a>
 			</div>
 		</div>
 ​
@@ -34,8 +34,8 @@
 			<img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="Meeting">
 			<div class="card-body">
 			<h5 class="card-title">Meets</h5>
-			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<a href="#" class="btn btn-warning">Organize Meeting</a>
+			<p class="card-text">Mentees get to join webinars organized by partnering organuzations</p>
+			<a href="{% url 'interface' %}" class="btn btn-warning">Join Webinar</a>
 			</div>
 		</div>
 ​
@@ -44,8 +44,8 @@
 			<img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="Meeting">
 			<div class="card-body">
 			<h5 class="card-title">Assignments</h5>
-			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<a href="#" class="btn btn-danger">Assignments</a>
+			<p class="card-text">Access assignments </p>
+			<a href="{% url 'assignments' %}" class="btn btn-danger">Assignments</a>
 			</div>
 		</div>
 ​
@@ -55,7 +55,7 @@
 			<div class="card-body">
 			<h5 class="card-title">Chats</h5>
 			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<a href="#" class="btn btn-success">Chat</a>
+			<a  href="{% url 'chat:home' %}" class="btn btn-success">Chat</a>
 			</div>
 		</div>
 		<!-- 5 -->

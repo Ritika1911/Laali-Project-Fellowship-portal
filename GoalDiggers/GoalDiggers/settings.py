@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-fq$k%84%(b@1s=xay06*298&$xl*%sd5dd9%97vh(dqy)a+7ax
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS =  []
 
 # Application definition
 
@@ -39,7 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login',
+    'myapp',
+    'interface',
+    'rest_framework',
+    'chat',
+    'feedbackform',
     'crispy_forms',
+    'assignments',
     'rest_framework.authtoken'
 ]
 REST_FRAMEWORK = {
@@ -142,3 +148,6 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'login.NewUser'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

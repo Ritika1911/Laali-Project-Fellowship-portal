@@ -7,6 +7,9 @@ from django.contrib.auth.models import User , auth
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import permission_classes
 
+def home(request):
+    return render(request,'lali.html')
+
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -27,6 +30,10 @@ def login(request):
         if user is not None:
             auth.login(request,user)
         if role=="mentee":
+            return redirect('register')
+        if role=="mentor":
+            return redirect('register')
+        if role=="intern":
             return redirect('register')
     
     else:
